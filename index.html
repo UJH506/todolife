@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoLife</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script defer src="./js/bg.js"></script>
+  <script defer src="./js/date.js"></script>
+  <script defer src="./js/time.js"></script>
+  <script defer src="./js/quotes.js"></script>
+  <script defer src="./js/weather.js"></script>
+  <script defer src="./js/initialState.js"></script>
+  <script defer src="./js/dday.js"></script>
+  <script defer src="./js/todo.js"></script>
+  <script defer src="./js/welcome.js"></script>
+</head>
+<body>
+  <div id="login">
+    <form autocomplete="off">
+      <label for="username">What's your name?</label>
+      <input type="text" name="username" id="username" autofocus
+      maxlength="5" required>
+      <button>START</button>
+    </form>
+  </div>
+
+  <div id="content">
+
+    <header>
+      <h1 class="sr-only">TodoLife</h1>
+
+      <p class="datetime">
+        <span class="date">2023.05.22</span>
+        <span class="day">수</span>
+        <span class="time">(12:41:50 am)</span>
+      </p>
+
+      <p class="quote">
+        <q class="msg">노력을 대신할 수 있는 것은 없습니다.</q>
+        <span class="author">토마스 에디슨</span>
+      </p>
+
+      <p class="btns">
+        <i class="random-color fas fa-images" title="랜덤컬러"></i>
+        <i class="expire fas fa-trash-restore-alt" title="초기화"></i>
+      </p>
+    </header>
+
+    <main>
+      <div class="container">
+        <p>
+          <span class="user">Duly</span>님,
+          오늘도 즐거운 하루 되세요~!
+        </p>
+        <section class="weather">
+          <h2><span class="city">Seoul</span> Weather</h2>
+          <article class="current">
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Cloud">
+            <h3>Cloud / 21.79</h3>
+          </article>
+
+          <article class="forecast today">
+            <h3>Today</h3>
+            <div>
+              <p>
+                <span class="frame"><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="#"></span>
+
+                <span>
+                  <span class="when">9시</span>
+                  <span class="temp">23</span>º
+                </span>
+              </p>
+
+              <p>
+                <span class="frame"><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="#"></span>
+
+                <span>
+                  <span class="when">9시</span>
+                  <span class="temp">23</span>º
+                </span>
+              </p>
+            </div>
+          </article>
+
+          <article class="forecast tomorrow">
+            <h3>Tomorrow</h3>
+            <div>
+              <p>
+                <span class="frame"><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="#"></span>
+
+                <span>
+                  <span class="when">9시</span>
+                  <span class="temp">23</span>º
+                </span>
+              </p>
+
+              <p>
+                <span class="frame"><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="#"></span>
+
+                <span>
+                  <span class="when">6시</span>
+                  <span class="temp">23</span>º
+                </span>
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <section class="dday">
+        <div class="tit">
+          <h2>
+            D-Day Goal Setting
+            <span>&lt;전체삭제&gt;</span>
+          </h2>
+          <i class="add fas fa-plus-circle"></i>
+        </div>
+
+        <div class="inputBox">
+          <form name="frmAdd" class="on" autocomplete="off">
+            <label for="addTit">목표</label>
+            <input type="text" name="addTit" id="addTit" placeholder="Enter your goal and press enter">
+            
+            <input type="date" name="addDate">
+            <button class="insert fas fa-check-square"></button>
+          </form>
+
+          <form name="frmEdit" autocomplete="off">
+            <label for="editTit">수정</label>
+            <input type="text" name="editTit" id="editTit" placeholder="Enter your goal and press enter">
+            
+            <input type="date" name="editDate">
+            <button class="insert fas fa-check-square"></button>
+          </form>
+        </div>
+
+        <ul class="list">
+          <!-- <li id="0">
+            <i class="fas fa-times-circle"></i>
+            <h3>D-3</h3>
+            <p>디데이 서비스 런칭</p>
+            <i class="fas fa-edit"></i>
+          </li> -->
+        </ul>
+      </section>
+
+
+      <section class="todo">
+        
+        <h2 class="sr-only">할일목록</h2>
+
+        <div class="inputBox">
+          <form name="frmTodoAdd" class="on" autocomplete="off">
+            <label for="addTask" class="sr-only">할일</label> <!--안써도되는건가 . . ?-->
+            <input type="text" name="addTask" id="addTask" placeholder="Enter your today's task and press enter">
+          </form>
+
+          <form name="frmTodoEdit">
+            <label for="editTask" class="sr-only">할일</label>
+            <input type="text" name="editTask" id="editTask" placeholder="Edit your today's task and press enter">
+          </form>
+        </div>
+
+        <ul class="list">
+
+          <li id="0">
+            <i class="insert fas fa-check-square"></i>
+            <!-- <i class="insert far fa-square"></i> -->
+            <h3 class="complete">투두프로젝트</h3>
+            <i class="fas fa-edit"></i>
+            <i class="del fas fa-times-circle"></i>
+          </li>
+
+          <li id="1">
+            <!-- <i class="insert fas fa-check-square"></i> -->
+            <i class="insert far fa-square"></i>
+            <h3>투두프로젝트</h3>
+            <i class="fas fa-edit"></i>
+            <i class="del fas fa-times-circle"></i>
+          </li>
+
+          <li id="2">
+            <!-- <i class="insert fas fa-check-square"></i> -->
+            <i class="insert far fa-square"></i>
+            <h3>투두프로젝트</h3>
+            <i class="fas fa-edit"></i>
+            <i class="del fas fa-times-circle"></i>
+          </li>
+
+          <li id="3">
+            <!-- <i class="insert fas fa-check-square"></i> -->
+            <i class="insert far fa-square"></i>
+            <h3>투두프로젝트</h3>
+            <i class="fas fa-edit"></i>
+            <i class="del fas fa-times-circle"></i>
+          </li>
+        </ul>
+        <list>
+
+        </list>
+
+      </section>
+    </main>
+
+    <footer>
+      <address>&copy;Designed by 엄지혜</address>
+    </footer>
+
+  </div>
+</body>
+</html>

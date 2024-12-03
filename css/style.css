@@ -1,0 +1,422 @@
+body {
+  color: #333;
+}
+
+#login {
+  max-width: 393px;
+  width: 90vw;
+  height: 99vh;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#login > form > label {
+  display: block;
+  padding-bottom: 5vh;
+  font-size: 24px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+#login > form > input {
+  background: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 60%;
+  color: #a799ff;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 auto 100px;
+  border-bottom: 2px solid #d9d9d9;
+}
+#login > form > button {
+  background: none;
+  border: none;
+  outline: none;
+  width: 60%;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: 800;
+  background-color: #a799ff;
+  border-radius: 20px;
+}
+
+#content {
+  display: none;
+  width: 1360px;
+  margin: 0 auto;
+}
+@media screen and (max-width:768px) {
+  #content {
+    width: 100%;
+  }
+}
+#content > header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 24px 0;
+  font-size: 20px;
+}
+@media screen and (max-width:768px) {
+  #content > header {
+    display: block;
+  }
+}
+#content > header > .btns {
+  display: flex;
+  justify-content: space-between;
+  width: 48px;
+}
+@media screen and (max-width:768px) {
+  #content > header > .btns {
+    position: absolute;
+    right: 0;
+    top: 28px;
+  }
+}
+#content > header > .btns > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content > header > .btns > i:hover {
+  color: #a799ff;
+  cursor: pointer;
+}
+#content > header > .datetime {
+  width: 32%;
+}
+@media screen and (max-width:768px) {
+  #content > header > .datetime {
+    width: 100%;
+    text-align: center;
+  }
+}
+#content > header > .datetime > .date {
+  font-weight: 600;
+}
+#content > header > .quote {
+  display: flex;
+  width: 60%;
+}
+@media screen and (max-width:768px) {
+  #content > header > .quote {
+    display: block;
+    width: 40%;
+    margin: 24px auto;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+#content > header > .quote > .msg {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 80%;
+  font-size: 20px;
+}
+@media screen and (max-width:768px) {
+  #content > header > .quote > .msg {
+    white-space: wrap;
+  }
+}
+#content > header > .quote > .author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  font-size: 12px;
+}
+@media screen and (max-width:768px) {
+  #content > header > .quote > .author {
+    display: block;
+    margin: 16px 0;
+  }
+}
+#content > header > .quote > .author::before {
+  content: "- ";
+}
+#content > header > .quote > .author::after {
+  content: " -";
+}
+#content > main {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width:768px) {
+  #content > main {
+    display: block;
+    height: auto;
+  }
+}
+#content > main > div.container,
+#content > main section {
+  width: 32%;
+  min-width: 380px;
+  padding: 24px 0;
+  border: 2px solid #a799ff;
+  border-radius: 10px;
+}
+@media screen and (max-width:768px) {
+  #content > main > div.container,
+  #content > main section {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+#content > main > div.container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0;
+  border: none;
+}
+#content > main > div.container > section {
+  width: 100%;
+}
+#content > main > div.container > p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  margin: 16px;
+}
+@media screen and (max-width:768px) {
+  #content > main > div.container > p {
+    margin-top: 0;
+  }
+}
+#content > main > div.container > .weather {
+  flex: 1 1 auto;
+  text-align: center;
+}
+#content > main > div.container > .weather > h2 > .city {
+  color: #a799ff;
+}
+#content > main > div.container > .weather > article.current > img {
+  width: 122px;
+}
+#content > main > div.container > .weather > article.current > h3 {
+  font-size: 1.2rem;
+}
+#content > main > div.container > .weather > article.forecast {
+  margin-top: 48px;
+}
+#content > main > div.container > .weather > article.forecast > div {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  margin: 0 auto;
+}
+#content > main > div.container > .weather > article.forecast > div > p {
+  display: flex;
+  align-items: center;
+}
+#content > main > div.container > .weather > article.forecast > div > p > .frame {
+  display: block;
+  width: 72px;
+  height: 72px;
+}
+#content > main > div.container > .weather > article.forecast > div > p > .frame > img {
+  display: block;
+  width: 100%;
+}
+#content > main > div.container > .weather > article.forecast > div > p > span {
+  line-height: 1.5;
+  text-align: left;
+}
+#content > main > .dday {
+  position: relative;
+}
+#content > main > .dday > .tit {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d9d9d9;
+}
+#content > main > .dday > .tit > h2 {
+  flex: 1 1 0;
+  text-align: center;
+}
+#content > main > .dday > .tit > h2 > span {
+  color: #ccc;
+  font-size: 0.5em;
+  cursor: pointer;
+}
+#content > main > .dday > .tit > h2 > span:hover {
+  text-decoration: underline;
+}
+#content > main > .dday > .tit > i {
+  align-self: flex-end;
+  color: #a799ff;
+  font-size: 24px;
+  cursor: pointer;
+}
+#content > main > .dday > .tit > i:hover {
+  color: #7b66ff;
+}
+#content > main > .dday > .inputBox {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 69px;
+  transform: translate(-50%, 0);
+  width: 90%;
+  height: 50px;
+  background-color: #fff;
+  border: 3px solid #ccc;
+  box-sizing: border-box;
+}
+#content > main > .dday > .inputBox.show {
+  display: block;
+}
+#content > main > .dday > .inputBox > form {
+  display: none;
+  padding: 10px 0;
+}
+#content > main > .dday > .inputBox > form.on {
+  display: flex;
+}
+#content > main > .dday > .inputBox > form > label {
+  padding: 0 10px;
+}
+#content > main > .dday > .inputBox > form > input[type=text] {
+  flex: 1 1 0;
+  outline: none;
+}
+#content > main > .dday > .inputBox > form > input[type=date] {
+  margin: 0 5px;
+}
+#content > main > .dday > .inputBox > form > .insert {
+  padding-right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  outline: none;
+}
+#content > main > .dday > .list {
+  overflow: auto;
+  width: 90%;
+  height: 470px;
+  margin: 20px auto 0;
+}
+@media screen and (max-width:768px) {
+  #content > main > .dday > .list {
+    height: auto;
+  }
+}
+#content > main > .dday > .list > li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+#content > main > .dday > .list > li.complete {
+  -webkit-text-decoration: line-through #a799ff;
+          text-decoration: line-through #a799ff;
+}
+#content > main > .dday > .list > li:last-child {
+  margin-bottom: 0;
+}
+#content > main > .dday > .list > li > i {
+  font-size: 18px;
+  color: #a799ff;
+}
+#content > main > .dday > .list > li > i:hover {
+  color: #7b66ff;
+}
+#content > main > .dday > .list > li > h3 {
+  padding: 0 10px;
+  color: #a799ff;
+  font-size: 20px;
+}
+#content > main > .dday > .list > li > p {
+  flex: 1 1 0;
+  font-size: 20px;
+}
+@media screen and (max-width:768px) {
+  #content > main > .dday {
+    margin: 10px 0;
+  }
+}
+#content > main > .todo {
+  padding-top: 0;
+}
+#content > main > .todo > .inputBox {
+  position: relative;
+  width: 90%;
+  height: 48px;
+  margin: 0 auto;
+}
+#content > main > .todo > .inputBox > form {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+}
+#content > main > .todo > .inputBox > form.on {
+  display: flex;
+}
+#content > main > .todo > .inputBox > form > input {
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1 1 0;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 2px solid #d9d9d9;
+}
+#content > main > .todo > .list {
+  overflow: auto;
+  width: 90%;
+  height: 500px;
+  margin: 24px auto 0;
+}
+@media screen and (max-width:768px) {
+  #content > main > .todo > .list {
+    height: auto;
+  }
+}
+#content > main > .todo > .list > li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+#content > main > .todo > .list > li:last-child {
+  margin-bottom: 0;
+}
+#content > main > .todo > .list > li > i {
+  color: #a799ff;
+  font-size: 18px;
+}
+#content > main > .todo > .list > li > i.del {
+  margin-left: 10px;
+}
+#content > main > .todo > .list > li > i:hover {
+  color: #7b66ff;
+  cursor: pointer;
+}
+#content > main > .todo > .list > li > h3 {
+  flex: 1 1 0;
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+#content > main > .todo > .list > li > h3.complete {
+  -webkit-text-decoration: line-through #a799ff;
+          text-decoration: line-through #a799ff;
+}
+#content > footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}/*# sourceMappingURL=style.css.map */

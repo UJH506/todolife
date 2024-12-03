@@ -1,0 +1,27 @@
+TodoLife 프로젝트
+
+1. 기본 레이아웃 html 구조와 반응형작업
+
+2. header UI 목업 (날짜시간, 명언, 기능버튼)
+
+3. header 기능구현
+  1) 랜덤 배경색 - bg.js
+  2) 날짜, 시간, ampm - date.js
+  3) 시간 ampm - time.js
+  4) 명언 - quotes.js
+
+4. 현재날씨정보 - weather.js
+
+5. Dday
+  - initialState.js (로컬스토리지를 이용한 데이터 저장 (초기데이터 ! -필기))
+
+  - dday.js
+    로컬스토리지에 저장된 데이터를 화면에 출력
+    디데이 내용수정, localStorage.setItem()
+    디데이 목표추가
+    디데이 목표삭제 및 전체삭제
+
+
+      @media #{$mobile} {
+        
+      }
